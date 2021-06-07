@@ -19,6 +19,12 @@
 </script>
 
 <Tailwindcss />
+{#await $promiseStore.then(() => Promise.reject())}
+Loading..
+{:catch error}
+{#if error}
+<strong class="text-red-700 font-bold">ERROR! {error} </strong>
+{/if}
 <header class="text-gray-600 body-font">
   <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
     <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
@@ -36,19 +42,10 @@
         <path d="M5 12h14M12 5l7 7-7 7"></path>
       </svg>
     </button>
-    {:else}
     <h3>Hello, {$userStore.username}!</h3>
-    {/if}
   </div>
 </header>
 <div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
-  {#await $promiseStore.then(() => Promise.reject())}
-  Loading..
-  {:catch error}
-  {#if error}
-  <strong class="text-red-700 font-bold">ERROR! {error} </strong>
-  {/if}
-  {#if $userStore}
   <svelte:head>
     <title>Home</title>
   </svelte:head>
@@ -146,7 +143,6 @@
       font-size: 20px;
     }
   </style>
-  }} />
   {:else}
     <div id="logo">
       <picture>
