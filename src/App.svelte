@@ -1,39 +1,42 @@
 <script>
-  import { onMount } from "svelte";
-  export let date;
+  import Tailwindcss from './Tailwindcss.svelte';
+  import Router from 'svelte-spa-router'
+  import SignUp from './routes/SignUp.svelte'
+  import SignIn from './routes/SignIn.svelte'
+  import ForgotPassword from './routes/ForgotPassword.svelte'
+  import {userbaseStore, userStore, promiseStore} from './stores'
+  const userbase = window.userbase
+  window.userbase = null
+  // stores
+  $userbaseStore = userbase
+  $userStore = null
+  $promiseStore = userbase.init({appId: 'cc34d760-bf44-4aba-8ed6-9e7db48bb9be'})
+          .then((session) => $userStore = session.user)
 
-  onMount(async () => {
-    const res = await fetch("/api/date");
-    const newDate = await res.text();
-    date = newDate;
-  });
+  function signout() {
+    $promiseStore = $userbaseStore.signOut().then(() => $userStore = null)
+  }
 </script>
 
-<main>
-  <div id="logo">
-    <picture>
-      <img src="../public/Logo.png" alt="Taxi" width="200"/>
-    </picture>
-  </div>
-  <h1>Welcome to VTC Taxi</h1>
-  <h2>
-    Log in
-  </h2>
+<Tailwindcss />
 
-  <br />
-
-  <form action="/action_page.php" target="_self">
-    <label for="email">Email:</label>
-    <input type="text" id="email"><br>
-
-    <label for="password">Password:</label>
-    <input type="password" id="password"><br>
-
-
-    <input type="submit" value="Log in">
-  </form>
-
-  <a href="./register">You don't have an account yet ? Register here</a>
-  <h2>Today is:</h2>
-  <p>{date ? date : 'Loading date...'}</p>
-</main>
+<div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
+  {#await $promiseStore.then(() => Promise.reject())}
+  Loading..
+  {:catch error}
+  {#if error}
+  <strong class="text-red-700 font-bold">ERROR! {error} </strong>
+  {/if}
+  {#if $userStore}
+  Hello, {$userStore.username}!
+  <button on:click={signout}>Logout</button>
+  {:else}
+  <h1>Welcome to THE BEST WAY TO learn SNOWBOARDING</h1>
+  <Router routes={{
+  '/': SignUp,
+  '/signin': SignIn,
+  '/forgotpassword': ForgotPassword
+  }} />
+  {/if}
+  {/await}
+</div>

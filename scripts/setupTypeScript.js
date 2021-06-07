@@ -1,17 +1,16 @@
 // @ts-check
 
 /** This script modifies the project to support TS code in .svelte files like:
+ <script lang="ts">
+ export let name: string;
+ </script>
 
-  <script lang="ts">
-  	export let name: string;
-  </script>
- 
-  As well as validating the code for CI.
-  */
+ As well as validating the code for CI.
+ */
 
 /**  To work on this script:
-  rm -rf test-template template && git clone sveltejs/template test-template && node scripts/setupTypeScript.js test-template
-*/
+ rm -rf test-template template && git clone sveltejs/template test-template && node scripts/setupTypeScript.js test-template
+ */
 
 const fs = require("fs")
 const path = require("path")
@@ -62,34 +61,22 @@ import typescript from '@rollup/plugin-typescript';`)
 // Replace name of entry point
 rollupConfig = rollupConfig.replace(`'src/main.js'`, `'src/main.ts'`)
 
-// Add preprocess to the svelte config, this is tricky because there's no easy signifier.
-// Instead we look for `css:` then the next `}` and add the preprocessor to that
-let foundCSS = false
-let match
-
-// https://regex101.com/r/OtNjwo/1
-const configEditor = new RegExp(/css:.|\n*}/gmi)
-while (( match = configEditor.exec(rollupConfig)) != null) {
-  if (foundCSS) {
-    const endOfCSSIndex = match.index + 1
-    rollupConfig = rollupConfig.slice(0, endOfCSSIndex) + ",\n			preprocess: sveltePreprocess()," + rollupConfig.slice(endOfCSSIndex);
-    break
-  }
-  if (match[0].includes("css:")) foundCSS = true
-}
-
+// Add preprocessor
+rollupConfig = rollupConfig.replace(
+    'compilerOptions:',
+    'preprocess: sveltePreprocess(),\n\t\t\tcompilerOptions:'
+);
 
 // Add TypeScript
 rollupConfig = rollupConfig.replace(
-  'commonjs(),',
-  'commonjs(),\n\t\ttypescript({\n\t\t\tsourceMap: !production,\n\t\t\tinlineSources: !production\n\t\t}),'
+    'commonjs(),',
+    'commonjs(),\n\t\ttypescript({\n\t\t\tsourceMap: !production,\n\t\t\tinlineSources: !production\n\t\t}),'
 );
 fs.writeFileSync(rollupConfigPath, rollupConfig)
 
 // Add TSConfig
 const tsconfig = `{
   "extends": "@tsconfig/svelte/tsconfig.json",
-
   "include": ["src/**/*"],
   "exclude": ["node_modules/*", "__sapper__/*", "public/*"]
 }`
