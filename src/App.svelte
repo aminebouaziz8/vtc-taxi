@@ -19,33 +19,16 @@
 </script>
 
 <Tailwindcss />
-{#await $promiseStore.then(() => Promise.reject())}
-Loading..
-{:catch error}
-{#if error}
-<strong class="text-red-700 font-bold">ERROR! {error} </strong>
-{/if}
-{#if $userStore}
-<header class="text-gray-600 body-font">
-  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-yellow-500 rounded-full" viewBox="0 0 24 24">
-        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-      </svg>
-      <span class="ml-3 text-xl">GoTaxi</span>
-    </a>
-    <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-      <a class="mr-5 hover:text-gray-900">Home</a>
-    </nav>
-    <button  on:click={signout} class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Log out
-      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-        <path d="M5 12h14M12 5l7 7-7 7"></path>
-      </svg>
-    </button>
-    <h3>Hello, {$userStore.username}!</h3>
-  </div>
-</header>
 <div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
+  {#await $promiseStore.then(() => Promise.reject())}
+  Loading..
+  {:catch error}
+  {#if error}
+  <strong class="text-red-700 font-bold">ERROR! {error} </strong>
+  {/if}
+  {#if $userStore}
+  Hello, {$userStore.username}!
+  <button on:click={signout}>Logout</button>
   <section>
     <img src="logo.png" alt="Taxi" width="200"/>
     <h1>
@@ -63,7 +46,7 @@ Loading..
 
     <p>Order your next ride !</p>
 
-    <form method="get" class="homebook">
+    <form action="" method="get" class="homebook">
       <div class="homebook">
         <label for="pickup" >Pickup:</label>
         <input id="pickup" type="text">
@@ -93,11 +76,11 @@ Loading..
       </div>
 
       <div class = "submit">
-        <a href=""><input type="submit" value="Book"></a>
+        <a href="#"><input type="submit" value="Book"></a>
       </div>
     </form>
   </section>
-</div>
+
   <style>
     section {
       display: flex;
@@ -109,12 +92,7 @@ Loading..
     h1 {
       width: 100%;
     }
-    .logo {
-      position: relative;
-      height: 0;
-      padding: 0 0 5% 0;
-      margin-left: 20%;
-    }
+
     label, input {
       display: table-cell;
       margin-bottom: 15px;
@@ -134,14 +112,13 @@ Loading..
       font-size: 20px;
     }
   </style>
-{:else}
-  <div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
-    <img src="logo.png" alt="Taxi" width="200"/>
-
-    <h1>Welcome to the best VTC Taxi booking service !</h1>
-    <Router routes={{
-    '/': SignUp,
-    '/signin': SignIn,
-    '/forgotpassword': ForgotPassword
-    }} />
-  </div>
+  {:else}
+  <h1>Welcome to THE BEST WAY TO learn SNOWBOARDING</h1>
+  <Router routes={{
+  '/': SignUp,
+  '/signin': SignIn,
+  '/forgotpassword': ForgotPassword
+  }} />
+  {/if}
+  {/await}
+</div>
