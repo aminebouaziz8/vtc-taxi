@@ -103,7 +103,7 @@ Loading..
       </div>
     </form>
   </section>
-
+</div>
   <style>
     section {
       display: flex;
@@ -141,17 +141,16 @@ Loading..
     }
   </style>
   {:else}
-    <div class="logo">
-      <picture>
-        <img src="logo.png" alt="Taxi" width="200"/>
-      </picture>
-    </div>
-  <h1>Welcome to the best VTC Taxi booking service !</h1>
-  <Router routes={{
-  '/': SignUp,
-  '/signin': SignIn,
-  '/forgotpassword': ForgotPassword
-  }} />
-  {/if}
-  {/await}
-</div>
+  <div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
+      <div class="logo">
+          <img src="logo.png" alt="Taxi" width="200"/>
+      </div>
+    <h1>Welcome to the best VTC Taxi booking service !</h1>
+    <Router routes={{
+    '/': SignUp,
+    '/signin': SignIn,
+    '/forgotpassword': ForgotPassword
+    }} />
+    {/if}
+    {/await}
+  </div>
