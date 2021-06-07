@@ -46,9 +46,6 @@ Loading..
   </div>
 </header>
 <div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
-  <svelte:head>
-    <title>Home</title>
-  </svelte:head>
 
   <section>
     <h1>
