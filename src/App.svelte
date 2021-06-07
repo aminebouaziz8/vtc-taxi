@@ -12,7 +12,7 @@
 <main>
   <div id="logo">
     <picture>
-      <img src="Logo.png" alt="Taxi" width="200"/>
+      <img src="../public/Logo.png" alt="Taxi" width="200"/>
     </picture>
   </div>
   <h1>Welcome to VTC Taxi</h1>
