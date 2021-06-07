@@ -144,5 +144,4 @@ Loading..
     '/signin': SignIn,
     '/forgotpassword': ForgotPassword
     }} />
-{/await}
   </div>
