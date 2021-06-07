@@ -35,7 +35,7 @@
     <h1>
       <div id="logo">
         <picture>
-          <img src="logo.png" alt="Taxi" width="200"/>
+          <img src="logo.jpg" alt="Taxi" width="200"/>
         </picture>
       </div>
 
@@ -53,29 +53,40 @@
 
     <p>Order your next ride !</p>
 
-    <form>
-      <label for="pickup">Pickup:</label>
-      <input type="text"><br>
+    <form action="/action_page.php" method="get" class="homebook">
+      <div class="homebook">
+        <label for="pickup" >Pickup:</label>
+        <input type="text">
+      </div>
 
-      <label for="destination">Destination:</label>
-      <input type="text"><br>
+      <div class="homebook">
+        <label for="destination">Destination:</label>
+        <input type="text">
+      </div>
 
-      <label for="date">Date:</label>
-      <input type="date" id="date" name="ridedate" value="2021-31-05" min="today" max="2021-12-31"><br>
+      <div class="homebook">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="ridedate" value="2021-31-05" min="today" max="2021-12-31">
+      </div>
 
-      <label for="nbpassengers">Number of passengers:</label>
-      <select id="nbpassengers" name="nbpassengers">
-        <option value= "">Choose an option</option>
-        <option value="1">1 passenger</option>
-        <option value="2">2 passengers</option>
-        <option value="3">3 passengers</option>
-        <option value="4">4 passengers</option>
-        <option value="5">5 passengers</option>
-        <option value="6">6 passengers</option>
-      </select><br>
+      <div class="homebook">
+        <label for="nbpassengers">Number of passengers:</label>
+        <select id="nbpassengers" name="nbpassengers">
+          <option value= "">Choose an option</option>
+          <option value="1">1 passenger</option>
+          <option value="2">2 passengers</option>
+          <option value="3">3 passengers</option>
+          <option value="4">4 passengers</option>
+          <option value="5">5 passengers</option>
+          <option value="6">6 passengers</option>
+        </select>
+      </div>
 
-      <input type="submit" value="Book">
+      <div class = "submit">
+        <a href="/login"><input type="submit" value="Book"></a>
+      </div>
     </form>
+  </section>
   {:else}
     <div id="logo">
       <picture>
@@ -91,3 +102,40 @@
   {/if}
   {/await}
 </div>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+  h1 {
+    width: 100%;
+  }
+  #logo {
+    position: relative;
+    height: 0;
+    padding: 0 0 5% 0;
+    margin-left: 20%;
+  }
+  label, input {
+    display: table-cell;
+    margin-bottom: 15px;
+  }
+  label {
+    padding-right:100px;
+  }
+  form.homebook {
+    display:table;
+  }
+  div.homebook {
+    display: table-row;
+  }
+  div.submit {
+    text-align: right;
+    margin-top:30px;
+    font-size: 20px;
+  }
+</style>
