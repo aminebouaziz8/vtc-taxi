@@ -30,7 +30,7 @@
   {#if $userStore}
   Hello, {$userStore.username}!
   <Router routes={{
-  '/': Home
+  '/home': Home
   }} />
   {:else}
     <div id="logo">
