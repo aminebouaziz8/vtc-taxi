@@ -19,5 +19,5 @@
     <Input label="Password" bind:value={password} type="password" required />
     <Input label="Email" bind:value={email} type="email" required />
     <Button>Sign up!</Button>
-    <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p>
+    <p class="text-xs text-gray-500 mt-3">You'll love us !</p>
 </form>

@@ -31,7 +31,8 @@
   Hello, {$userStore.username}!
   <button on:click={signout}>Logout</button>
   {:else}
-  <h1>Welcome to THE BEST WAY TO learn SNOWBOARDING</h1>
+  <img src="../public/logo.png" alt="Logo">
+  <h1>Welcome to THE BEST WAY TO book VTC Taxi</h1>
   <Router routes={{
   '/': SignUp,
   '/signin': SignIn,
