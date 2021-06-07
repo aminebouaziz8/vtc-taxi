@@ -10,7 +10,7 @@
   // stores
   $userbaseStore = userbase
   $userStore = null
-  $promiseStore = userbase.init({appId: 'cc34d760-bf44-4aba-8ed6-9e7db48bb9be'})
+  $promiseStore = userbase.init({appId: '1231870e-0438-4217-9005-8bea74e68100'})
           .then((session) => $userStore = session.user)
 
   function signout() {
