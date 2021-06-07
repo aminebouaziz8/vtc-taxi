@@ -49,7 +49,7 @@ Loading..
 
   <section>
     <h1>
-      <div id="logo">
+      <div class="logo">
         <picture>
           <img src="TaxiLogo.jpg" alt="Taxi" width="200"/>
         </picture>
@@ -72,12 +72,12 @@ Loading..
     <form action="/action_page.php" method="get" class="homebook">
       <div class="homebook">
         <label for="pickup" >Pickup:</label>
-        <input type="text">
+        <input id="pickup" type="text">
       </div>
 
       <div class="homebook">
         <label for="destination">Destination:</label>
-        <input type="text">
+        <input id="destination" type="text">
       </div>
 
       <div class="homebook">
@@ -141,7 +141,7 @@ Loading..
     }
   </style>
   {:else}
-    <div id="logo">
+    <div class="logo">
       <picture>
         <img src="logo.png" alt="Taxi" width="200"/>
       </picture>
