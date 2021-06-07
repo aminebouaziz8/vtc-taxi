@@ -12,7 +12,7 @@
 <main>
   <div id="logo">
     <picture>
-      <img src="TaxiLogo.jpg" alt="Taxi" width="200"/>
+      <img src="Logo.png" alt="Taxi" width="200"/>
     </picture>
   </div>
   <h1>Welcome to VTC Taxi</h1>
@@ -32,7 +32,7 @@
 
     <input type="submit" value="Log in">
   </form>
-  
+
   <a href="./register">You don't have an account yet ? Register here</a>
   <h2>Today is:</h2>
   <p>{date ? date : 'Loading date...'}</p>
