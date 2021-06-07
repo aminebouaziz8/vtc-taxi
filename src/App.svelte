@@ -35,7 +35,7 @@ Loading..
       <span class="ml-3 text-xl">GoTaxi</span>
     </a>
     <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-      <a href="/home" class="mr-5 hover:text-gray-900">Home</a>
+      <a class="mr-5 hover:text-gray-900">Home</a>
     </nav>
     <button  on:click={signout} class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Log out
       <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
@@ -46,15 +46,9 @@ Loading..
   </div>
 </header>
 <div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
-
   <section>
+    <img src="logo.png" alt="Taxi" width="200"/>
     <h1>
-      <div class="logo">
-        <picture>
-          <img src="TaxiLogo.jpg" alt="Taxi" width="200"/>
-        </picture>
-      </div>
-
       GoTaxi
     </h1>
 
@@ -69,7 +63,7 @@ Loading..
 
     <p>Order your next ride !</p>
 
-    <form action="/action_page.php" method="get" class="homebook">
+    <form method="get" class="homebook">
       <div class="homebook">
         <label for="pickup" >Pickup:</label>
         <input id="pickup" type="text">
@@ -99,7 +93,7 @@ Loading..
       </div>
 
       <div class = "submit">
-        <a href="/login"><input type="submit" value="Book"></a>
+        <a href=""><input type="submit" value="Book"></a>
       </div>
     </form>
   </section>
@@ -140,17 +134,16 @@ Loading..
       font-size: 20px;
     }
   </style>
-  {:else}
+{:else}
   <div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
-      <div class="logo">
-          <img src="logo.png" alt="Taxi" width="200"/>
-      </div>
+    <img src="logo.png" alt="Taxi" width="200"/>
+
     <h1>Welcome to the best VTC Taxi booking service !</h1>
     <Router routes={{
     '/': SignUp,
     '/signin': SignIn,
     '/forgotpassword': ForgotPassword
     }} />
-    {/if}
-    {/await}
+{/if}
+{/await}
   </div>
