@@ -31,43 +31,58 @@
   Hello, {$userStore.username}!
   <button on:click={signout}>Logout</button>
 
-  <h2 class="subtitle">Always on time</h2>
+  <section>
+    <h1>
+      <div id="logo">
+        <picture>
+          <img src="logo.png" alt="Taxi" width="200"/>
+        </picture>
+      </div>
 
-  <h2>
-    Whether you’re visiting Paris and want to book a taxi from the train station <strong>to
-    your hotel</strong>, need to get a cab from the city <strong>back home</strong> or are flying out from Paris
-    airports and need an <strong>airport express taxi service</strong> in Paris to get you there as
-    quickly as possible, you can rely on us.
-  </h2>
+      GoTaxi
+    </h1>
 
-  <p>Order your next ride !</p>
+    <h2 class="subtitle">Always on time</h2>
 
-  <form>
-    <label for="pickup">Pickup:</label>
-    <input id="pickup" type="text"><br>
+    <h2>
+      Whether you’re visiting Paris and want to book a taxi from the train station <strong>to
+      your hotel</strong>, need to get a cab from the city <strong>back home</strong> or are flying out from Paris
+      airports and need an <strong>airport express taxi service</strong> in Paris to get you there as
+      quickly as possible, you can rely on us.
+    </h2>
 
-    <label for="destination">Destination:</label>
-    <input id="destination" type="text"><br>
+    <p>Order your next ride !</p>
 
-    <label for="date">Date:</label>
-    <input type="date" id="date" name="ridedate" value="2021-31-05" min="today" max="2021-12-31"><br>
+    <form>
+      <label for="pickup">Pickup:</label>
+      <input type="text"><br>
 
-    <label for="nbpassengers">Number of passengers:</label>
-    <select id="nbpassengers" name="nbpassengers">
-      <option value= "">Choose an option</option>
-      <option value="1">1 passenger</option>
-      <option value="2">2 passengers</option>
-      <option value="3">3 passengers</option>
-      <option value="4">4 passengers</option>
-      <option value="5">5 passengers</option>
-      <option value="6">6 passengers</option>
-    </select><br>
+      <label for="destination">Destination:</label>
+      <input type="text"><br>
 
-    <input type="submit" value="Book">
-  </form>
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="ridedate" value="2021-31-05" min="today" max="2021-12-31"><br>
+
+      <label for="nbpassengers">Number of passengers:</label>
+      <select id="nbpassengers" name="nbpassengers">
+        <option value= "">Choose an option</option>
+        <option value="1">1 passenger</option>
+        <option value="2">2 passengers</option>
+        <option value="3">3 passengers</option>
+        <option value="4">4 passengers</option>
+        <option value="5">5 passengers</option>
+        <option value="6">6 passengers</option>
+      </select><br>
+
+      <input type="submit" value="Book">
+    </form>
   {:else}
-  <img src="logo.png" alt="Logo">
-  <h1>Welcome to THE BEST WAY TO book VTC Taxi</h1>
+    <div id="logo">
+      <picture>
+        <img src="logo.png" alt="Taxi" width="200"/>
+      </picture>
+    </div>
+  <h1>Welcome to the best VTC Taxi booking service !</h1>
   <Router routes={{
   '/': SignUp,
   '/signin': SignIn,
