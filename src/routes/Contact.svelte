@@ -13,42 +13,42 @@ mail ($message .=$_POST['champtexte2'], "Confirmation of your inscription", $mes
 ?>
 
 
-<form action="/profile page" method="post">
-    <div>
-        <label for="name">Name : </label>
+<form class = "contact" action="/profile page" method="post">
+    <div class = "contact" >
+        <label  class = "contact" for="name">Name : </label>
         <input type="text" id="name" name="name">
     </div>
-     <div>
-        <label for="firstname">Firstname : </label>
+     <div class = "contact" >
+        <label  class = "contact" for="firstname">Firstname : </label>
         <input type="text" id="firstname" name="firstname">
     </div>
-    <div>
+    <div class = "contact" >
 <input type="file" name="photo" id="photo" /> 
      </div>
-     <div>
+     <div class = "contact" >
 <input type="submit" class="btn" value="envoyer" /> 
      </div>
-    <div>
-        <label for="mail">e-mail :</label>
+    <div class = "contact" >
+        <label  class = "contact" for="mail">e-mail :</label>
         <input type="email" id="mail" name="user_mail">
     </div>
-    <div>
-        <label for="phone">phone number: </label>
+    <div class = "contact" >
+        <label  class = "contact" for="phone">phone number: </label>
         <input type="text " id="phone" name="phone_number">
     </div>
-<div>
-        <label for="city">City : </label>
+<div class = "contact" >
+        <label  class = "contact" for="city">City : </label>
         <input type="text" id="city" name=”city">
     </div>
-<div>
-        <label for="adress">Adress : </label>
+<div class = "contact" >
+        <label  class = "contact" for="adress">Adress : </label>
         <input type="text" id="adress" name=“address”>
     </div>
 </form>
 
 
 
-form {
+form.contact {
   /* Uniquement centrer le formulaire sur la page */
   margin: 0 auto;
   width: 400px;
@@ -58,11 +58,11 @@ form {
   border-radius: 1em;
 }
 
-form div + div {
+div.contact {
   margin-top: 1em;
 }
 
-label {
+label.contact {
   /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
   display: inline-block;
   width: 90px;
