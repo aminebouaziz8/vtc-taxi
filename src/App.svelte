@@ -22,7 +22,8 @@
   $promiseStore = userbase.init({appId: '1231870e-0438-4217-9005-8bea74e68100'})
           .then((session) => $userStore = session.user)
   function signout() {
-    $promiseStore = $userbaseStore.signOut().then(() => $userStore = null)
+    $promiseStore = $userbaseStore.signOut().then(() => $userStore = null);
+    () => push('/')
   }
 </script>
 
@@ -55,7 +56,7 @@ Loading..
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <a class="nav-link" href="/profile">Hello, {$userStore.username}! </a>
+      <a class="nav-link" href="#/profile">Hello, {$userStore.username}! </a>
       <Router routes={{
       '/profile' : Profile
       }} />
