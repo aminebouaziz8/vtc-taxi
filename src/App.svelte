@@ -47,9 +47,6 @@ Loading..
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <a class="nav-link" href="/profile">Hello, {$userStore.username}! </a>
-      <Router routes={{
-      '/profile' : Profile
-      }} />
       <button on:click={signout} class="btn btn-outline-danger my-2 my-sm-0" type="submit">Log out</button>
     </form>
   </div>
@@ -105,15 +102,6 @@ Loading..
     </form>
   </section>
 </div>
-<footer class="page-footer font-small blue">
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2021 Copyright:
-    <a> vtc-taxi.com</a>
-  </div>
-  <!-- Copyright -->
-
-</footer>
 {:else}
 <div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
 
@@ -124,14 +112,5 @@ Loading..
   '/forgotpassword': ForgotPassword
   }} />
 </div>
-<footer class="page-footer font-small blue">
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2021 Copyright:
-    <a> vtc-taxi.com</a>
-  </div>
-  <!-- Copyright -->
-
-</footer>
 {/if}
 {/await}
