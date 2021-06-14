@@ -113,7 +113,7 @@
     }
   </style>
   {:else}
-  <h1>Welcome to THE BEST WAY TO learn SNOWBOARDING</h1>
+  <h1>Welcome to THE BEST WAY TO book a Taxi !</h1>
   <Router routes={{
   '/': SignUp,
   '/signin': SignIn,
