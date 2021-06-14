@@ -21,7 +21,7 @@
   }
 </script>
 
-<Tailwindcss />
+<!-- <Tailwindcss />
 {#await $promiseStore.then(() => Promise.reject())}
 Loading..
 {:catch error}
@@ -29,7 +29,7 @@ Loading..
 <strong class="text-red-700 font-bold">ERROR! {error.message} </strong>
 {/if}
 
-{#if $userStore}
+{#if $userStore}-->
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -51,7 +51,7 @@ Loading..
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <Link class="nav-link" to="Profile">Hello, {$userStore.username}! </Link>
+      <Link class="nav-link" to="Profile">Hello, <!--{$userStore.username}-->! </Link>
       <button on:click={signout} class="btn btn-outline-danger my-2 my-sm-0" type="submit">Log out</button>
     </form>
   </div>
@@ -67,7 +67,7 @@ Loading..
     <a class="text-dark" >VTC Taxi</a>
   </div>
 </footer>
-{:else}
+<!--{:else}
 <div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
   <h1>Welcome to THE BEST WAY TO book a Taxi !</h1>
   <Router routes={{
@@ -77,4 +77,4 @@ Loading..
   }} />
 </div>
 {/if}
-{/await}
+{/await}-->
