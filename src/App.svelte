@@ -9,9 +9,10 @@
 
   const routes = {
     // Exact path
-    '/': Home,
-
-    '/profile': Profile
+    '/': SignUp,
+    '/profile': Profile,
+    '/signin': SignIn,
+    '/forgotpassword': ForgotPassword
   }
   const userbase = window.userbase
   window.userbase = null
@@ -126,11 +127,6 @@ Loading..
 {:else}
 <div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
   <h1>Welcome to THE BEST WAY TO book a Taxi !</h1>
-  <Router routes={{
-  '/': SignUp,
-  '/signin': SignIn,
-  '/forgotpassword': ForgotPassword
-  }} />
 </div>
 {/if}
 {/await}
