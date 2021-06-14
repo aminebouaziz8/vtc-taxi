@@ -1,10 +1,10 @@
 <script>
-    import Tailwindcss from './Tailwindcss.svelte';
+    import Tailwindcss from '../Tailwindcss.svelte';
     import Router from 'svelte-spa-router'
-    import SignUp from './routes/SignUp.svelte'
-    import SignIn from './routes/SignIn.svelte'
-    import ForgotPassword from './routes/ForgotPassword.svelte'
-    import {userbaseStore, userStore, promiseStore} from './stores'
+    import SignUp from './SignUp.svelte'
+    import SignIn from './SignIn.svelte'
+    import ForgotPassword from './ForgotPassword.svelte'
+    import {userbaseStore, userStore, promiseStore} from '../stores'
     const userbase = window.userbase
     window.userbase = null
     // stores
