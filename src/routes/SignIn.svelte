@@ -3,6 +3,7 @@
     import Input from '../components/Input.svelte'
     import A from '../components/A.svelte'
     import {userbaseStore, userStore, promiseStore} from '../stores'
+    import {push, pop, replace} from 'svelte-spa-router'
     let username, password
     function signin() {
         $promiseStore = $userbaseStore.signIn({username, password})
