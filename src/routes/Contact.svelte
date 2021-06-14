@@ -10,7 +10,7 @@ import { userStore } from "../stores";
 
         <div class="row justify-content-center">
             <div class="col-4">
-                <h1 class="center subtitle" style="text-align: center;">Contact us.</h1>
+                <h1 class="center subtitle" style="text-align: center;">Write us</h1>
             </div>
         </div>
 
@@ -23,7 +23,7 @@ import { userStore } from "../stores";
             <form class="col-16">
                 <div class="form-group">
                     <label for="pickUp">Email</label>
-                    <input type="text" class="form-control" id="pickUp" placeholder="ex: Cergy">
+                    <input type="text" class="form-control" id="pickUp" placeholder="ex: christophe.harrer@gmail.com">
                 </div>
                 <div class="form-group">
                     <label for="subject">Subject</label>
