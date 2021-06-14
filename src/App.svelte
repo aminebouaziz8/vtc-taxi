@@ -8,6 +8,7 @@
   import Profile from './routes/Profile.svelte'
   import ForgotPassword from './routes/ForgotPassword.svelte'
   import Home from './routes/Home.svelte'
+  import Contact from '.routes/Contact.svelte'
   import {userbaseStore, userStore, promiseStore} from './stores'
 
   const routes = {
@@ -16,7 +17,8 @@
     '/signup': SignUp,
     '/signin': SignIn,
     '/forgotpassword': ForgotPassword,
-    '/profile': Profile
+    '/profile': Profile,
+    '/contact': Contact 
   }
   const userbase = window.userbase
   window.userbase = null
@@ -56,7 +58,7 @@ Loading..
         <a class="nav-link" href="/" use:link>Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link">Contact</a>
+        <a class="nav-link" href="/contact" use:link>Contact</a>
       </li>
     </ul>
   
