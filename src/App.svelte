@@ -44,14 +44,14 @@ Loading..
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <link class="nav-link" to="Home">Home<span class="sr-only">(current)</span></link>
+        <Link class="nav-link" to="Home">Home</Link>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="#">Contact</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <link class="nav-link" to="Profile">Hello, {$userStore.username}! </link>
+      <Link class="nav-link" to="Profile">Hello, {$userStore.username}! </Link>
       <button on:click={signout} class="btn btn-outline-danger my-2 my-sm-0" type="submit">Log out</button>
     </form>
   </div>
