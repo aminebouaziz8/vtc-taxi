@@ -8,7 +8,7 @@
   import Profile from './routes/Profile.svelte'
   import ForgotPassword from './routes/ForgotPassword.svelte'
   import Home from './routes/Home.svelte'
-  import Contact from '.routes/Contact.svelte'
+  import Contact from './routes/Contact.svelte'
   import {userbaseStore, userStore, promiseStore} from './stores'
 
   const routes = {
