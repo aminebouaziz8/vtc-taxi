@@ -27,7 +27,7 @@
           .then((session) => $userStore = session.user)
   function signout() {
     $promiseStore = $userbaseStore.signOut().then(() => $userStore = null);
-    () => push('/signin')
+    () => push('#/signin')
   }
 </script>
 <Tailwindcss />
@@ -71,6 +71,11 @@ Loading..
 {:else}
 <div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
   <h1>Welcome to THE BEST WAY TO book a Taxi !</h1>
+  <Router {{
+          '/': SignIn,
+          '/signup': SignUp,
+          '/forgetPassword': ForgetPassword
+          }}/>
 </div>
 {/if}
 {/await}
