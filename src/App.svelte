@@ -16,7 +16,8 @@
     '/signup': SignUp,
     '/signin': SignIn,
     '/forgotpassword': ForgotPassword,
-    '/profile': Profile
+    '/profile': Profile,
+    '/contact': Contact
   }
   const userbase = window.userbase
   window.userbase = null
@@ -53,10 +54,10 @@ Loading..
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/" use:link>Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="./routes/Contact.svelte">Contact</a>
+        <a class="nav-link" href="/contact" use:link>Contact</a>
       </li>
     </ul>
   

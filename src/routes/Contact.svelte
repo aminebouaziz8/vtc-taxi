@@ -1,3 +1,11 @@
+<script>
+    import Button from '../components/Button.svelte'
+    import Input from '../components/Input.svelte'
+    import A from '../components/A.svelte'
+    import {userbaseStore, userStore, promiseStore} from '../stores'
+    import {push, pop, replace} from 'svelte-spa-router'
+</script>
+
 <?php
 if($_POST) {
 
@@ -47,7 +55,7 @@ mail ($message .=$_POST['champtexte2'], "Confirmation of your inscription", $mes
 </form>
 
 
-
+<style>
 form.contact {
   /* Uniquement centrer le formulaire sur la page */
   margin: 0 auto;
@@ -68,3 +76,4 @@ label.contact {
   width: 90px;
   text-align: right;
 }
+</style>
