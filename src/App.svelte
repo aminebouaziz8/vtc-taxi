@@ -11,7 +11,7 @@
     // Exact path
     '/': Home,
 
-    '/profile': Profile,
+    '/profile': Profile
   }
   const userbase = window.userbase
   window.userbase = null
