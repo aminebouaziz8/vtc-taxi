@@ -1,10 +1,11 @@
 <script>
   import {Router, Link, Routes} from "svelte-routing";
   //import Tailwindcss from './Tailwindcss.svelte';
-  import SignUp from './routes/SignUp.svelte';
-  import SignIn from './routes/SignIn.svelte';
+  //import SignUp from './routes/SignUp.svelte';
+  //import SignIn from './routes/SignIn.svelte';
   import Profile from './routes/Profile.svelte';
-  import ForgotPassword from './routes/ForgotPassword.svelte';
+  import Home from './routes/Home.svelte';
+  //import ForgotPassword from './routes/ForgotPassword.svelte';
   //import {userbaseStore, userStore, promiseStore} from './stores'
 
   export let url = "";
@@ -31,9 +32,10 @@ Loading..
 
 {#if $userStore}-->
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+-->
 <Router url="{url}">
+  <nav>
 <!--<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <img src="/logo.png" alt="Taxi" width="40"/>
   <a class="navbar-brand" >GoTaxi</a>
@@ -44,30 +46,30 @@ Loading..
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">-->
-        <Link class="nav-link" to="Home">Home</Link>
+        <Link to="Home">Home</Link>
   <!--</li>
   <li class="nav-item active">
     <a class="nav-link" href="#">Contact</a>
   </li>
 </ul>
 <form class="form-inline my-2 my-lg-0">-->
-      <Link class="nav-link" to="Profile">Hello, <!--{$userStore.username}-->! </Link>
+      <Link to="Profile">Hello, <!--{$userStore.username}-->! </Link>
   <!--<button on:click={signout} class="btn btn-outline-danger my-2 my-sm-0" type="submit">Log out</button>
 </form>
 </div>
 </nav>-->
-
+  </nav>
 <div>
 <Route path="/" component="{Home}"/>
 <Route path="/" component="{Profile}"/>
 </div>
 </Router>
-<footer class="bg-light text-center text-lg-start">
+<!--<footer class="bg-light text-center text-lg-start">
 <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
 © 2021 Copyright:
 <a class="text-dark" >VTC Taxi</a>
 </div>
-</footer>
+</footer>-->
 <!--{:else}
 <div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
 <h1>Welcome to THE BEST WAY TO book a Taxi !</h1>
