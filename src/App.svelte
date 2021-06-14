@@ -26,8 +26,14 @@ Loading..
 {#if error}
 <strong class="text-red-700 font-bold">ERROR! {error.message} </strong>
 {/if}
-
+<Router routes={{
+'/': SignUp,
+'/signin': SignIn,
+'/forgotpassword': ForgotPassword,
+'/profile' : Profile
+}} />
 {#if $userStore}
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -116,11 +122,6 @@ Loading..
 {:else}
 <div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
   <h1>Welcome to THE BEST WAY TO book a Taxi !</h1>
-  <Router routes={{
-  '/': SignUp,
-  '/signin': SignIn,
-  '/forgotpassword': ForgotPassword
-  }} />
 </div>
 {/if}
 {/await}
