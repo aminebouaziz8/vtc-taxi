@@ -58,12 +58,12 @@ Loading..
 
     <div class="row justify-content-center">
 
-        <h1 class="center subtitle">Always on time !</h1>
+        <h1 class="center subtitle" style="text-align: center;">Always on time !</h1>
       </div>
     </div>
     <div class="row justify-content-center">
       <div class="col-4">
-        <h2 class="center">
+        <h2 style="text-align: center;">
           Whether you’re visiting Paris and want to book a taxi from the train station <strong>to
           your hotel</strong>, need to get a cab from the city <strong>back home</strong> or are flying out from Paris
           airports and need an <strong>airport express taxi service</strong> in Paris to get you there as
@@ -71,7 +71,7 @@ Loading..
         </h2>
       </div>
     </div>
-    <p class="justify-content-center">Order your next ride !</p>
+    <p style="text-align: center;">Order your next ride !</p>
 
     <form>
       <div class="form-group">
