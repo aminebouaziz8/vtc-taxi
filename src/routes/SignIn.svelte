@@ -7,7 +7,6 @@
     function signin() {
         $promiseStore = $userbaseStore.signIn({username, password})
             .then((user) => $userStore = user)
-        $location.path('/home');
     }
 </script>
 
