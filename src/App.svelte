@@ -48,9 +48,6 @@ Loading..
     <form class="form-inline my-2 my-lg-0">
       <a class="nav-link" href="/profile">Hello, {$userStore.username}! </a>
       <Router routes={{
-      '/': SignUp,
-      '/signin': SignIn,
-      '/forgotpassword': ForgotPassword,
       '/profile' : Profile
       }} />
       <button on:click={signout} class="btn btn-outline-danger my-2 my-sm-0" type="submit">Log out</button>
