@@ -28,7 +28,8 @@ import { userStore } from "../stores";
                 </div>
                 <div class="form-group">
                     <label for="subject">Subject</label>
-                    <textarea type="text" class="form-control" id="subject" placeholder="Write something..." style= "height:200px"></textarea></textarea>                </div>
+                    <textarea type="text" class="form-control" id="subject" placeholder="Write something..." style= "height:200px"></textarea>
+                </div>
                 <div class="form-check form-check-inline">
                     <button type="submit" class="btn btn-primary">Send</button>
                 </div>
