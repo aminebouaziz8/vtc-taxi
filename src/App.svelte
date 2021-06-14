@@ -23,7 +23,7 @@
 Loading..
 {:catch error}
 {#if error}
-<strong class="text-red-700 font-bold">ERROR! {error} </strong>
+<strong class="text-red-700 font-bold">ERROR! {error.message} </strong>
 {/if}
 
 {#if $userStore}
@@ -47,6 +47,12 @@ Loading..
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <a class="nav-link" href="#">Hello, {$userStore.username}! </a>
+      <Router routes={{
+      '/': SignUp,
+      '/signin': SignIn,
+      '/forgotpassword': ForgotPassword,
+      '/profile' : Profile
+      }} />
       <button on:click={signout} class="btn btn-outline-danger my-2 my-sm-0" type="submit">Log out</button>
     </form>
   </div>
@@ -102,6 +108,15 @@ Loading..
     </form>
   </section>
 </div>
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2021 Copyright:
+    <a> vtc-taxi.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
 {:else}
 <div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
 
@@ -112,5 +127,14 @@ Loading..
   '/forgotpassword': ForgotPassword
   }} />
 </div>
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2021 Copyright:
+    <a> vtc-taxi.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
 {/if}
 {/await}
