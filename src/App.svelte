@@ -17,8 +17,9 @@
     $promiseStore = $userbaseStore.signOut().then(() => $userStore = null)
   }
 </script>
-<body>
+
 <Tailwindcss />
+<body>
 {#await $promiseStore.then(() => Promise.reject())}
 Loading..
 {:catch error}
