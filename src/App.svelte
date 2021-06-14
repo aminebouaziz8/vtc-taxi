@@ -59,6 +59,7 @@ Loading..
       {#if $userStore}
       Hello, {$userStore.username}!
       <button on:click={signout} class="btn btn-outline-success my-2 my-sm-0" type="submit">Log out</button>
+      {/if}
     </form>
   </div>
 </nav>
@@ -148,7 +149,7 @@ Loading..
       font-size: 20px;
     }
   </style>
-  {:else}
+  {#if !$userStore}
   <h1>Welcome to THE BEST WAY TO book a Taxi !</h1>
   <Router routes={{
   '/': SignUp,
