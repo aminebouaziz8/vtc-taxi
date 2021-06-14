@@ -29,7 +29,7 @@
   }
 </script>
 <Tailwindcss />
-<Router {routes}/>
+
 {#await $promiseStore.then(() => Promise.reject())}
 Loading..
 {:catch error}
@@ -72,3 +72,4 @@ Loading..
 </div>
 {/if}
 {/await}
+<Router {routes}/>
