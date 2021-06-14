@@ -7,6 +7,7 @@
     function signin() {
         $promiseStore = $userbaseStore.signIn({username, password})
             .then((user) => $userStore = user)
+        push('/');
     }
 </script>
 

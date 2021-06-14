@@ -7,6 +7,7 @@
     function signup() {
         $promiseStore = $userbaseStore.signUp({username, password, email})
             .then((user) => $userStore = user)
+            push('/');
     }
 </script>
 
