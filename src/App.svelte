@@ -56,7 +56,7 @@ Loading..
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <a class="nav-link" href="#/profile">Hello, {$userStore.username}! </a>
+      <a class="nav-link" href="/profile">Hello, {$userStore.username}! </a>
       <Router routes={{
       '/profile' : Profile
       }} />
