@@ -2,11 +2,13 @@
     import Button from '../components/Button.svelte'
     import Input from '../components/Input.svelte'
     import A from '../components/A.svelte'
+    import {push, pop, replace} from 'svelte-spa-router'
     import {userbaseStore, userStore, promiseStore} from '../stores'
     let username, password, email
     function signup() {
         $promiseStore = $userbaseStore.signUp({username, password, email})
             .then((user) => $userStore = user)
+            push('/');
     }
 </script>
 
