@@ -1,6 +1,8 @@
 <script>
   import Tailwindcss from './Tailwindcss.svelte';
   import Router from 'svelte-spa-router'
+  import {link} from 'svelte-spa-router'
+  import {push, pop, replace} from 'svelte-spa-router'
   import SignUp from './routes/SignUp.svelte'
   import SignIn from './routes/SignIn.svelte'
   import Profile from './routes/Profile.svelte'
@@ -25,7 +27,7 @@
           .then((session) => $userStore = session.user)
   function signout() {
     $promiseStore = $userbaseStore.signOut().then(() => $userStore = null);
-    () => push('/')
+    () => push('/signin')
   }
 </script>
 <Tailwindcss />
