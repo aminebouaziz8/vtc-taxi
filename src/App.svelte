@@ -65,7 +65,7 @@
   Hello, {$userStore.username}!
   <button on:click={signout}>Logout</button>
   <section>
-    <img src="logo.png" alt="Taxi" width="200"/>
+    <img src="/logo.png" alt="Taxi" width="200"/>
     <h1>
       GoTaxi
     </h1>
