@@ -57,13 +57,13 @@ Loading..
   <section>
 
     <div class="row justify-content-center">
-
+    <div class="col-4">
         <h1 class="center subtitle" style="text-align: center;">Always on time !</h1>
       </div>
     </div>
     <div class="row justify-content-center">
       <div class="col-4">
-        <h2 style="text-align: center;">
+        <h2 style="text-align: center">
           Whether you’re visiting Paris and want to book a taxi from the train station <strong>to
           your hotel</strong>, need to get a cab from the city <strong>back home</strong> or are flying out from Paris
           airports and need an <strong>airport express taxi service</strong> in Paris to get you there as
@@ -71,7 +71,7 @@ Loading..
         </h2>
       </div>
     </div>
-    <p style="text-align: center;">Order your next ride !</p>
+    <p style="text-align: center">Order your next ride !</p>
 
     <form>
       <div class="form-group">
@@ -95,7 +95,7 @@ Loading..
         <label class="form-check-label" for="inlineRadio2">2 passengers</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
         <label class="form-check-label" for="inlineRadio3">3 passengers</label>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
