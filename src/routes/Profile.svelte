@@ -116,13 +116,9 @@ Loading..
     }} />
 </div>
 <footer class="page-footer font-small blue">
-
-    <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© 2021 Copyright:
         <a> vtc-taxi.com</a>
     </div>
-    <!-- Copyright -->
-
 </footer>
 {/if}
 {/await}
