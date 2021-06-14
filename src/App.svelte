@@ -27,7 +27,7 @@
           .then((session) => $userStore = session.user)
   function signout() {
     $promiseStore = $userbaseStore.signOut().then(() => $userStore = null);
-    () => push('#/signin')
+    push('/signin');
   }
 </script>
 <Tailwindcss />
