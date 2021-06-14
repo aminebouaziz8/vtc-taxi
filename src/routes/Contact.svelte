@@ -20,7 +20,6 @@ mail ($message .=$_POST['champtexte2'], "Confirmation of your inscription", $mes
 }
 ?>
 
-
 <form class = "contact" action="/profile page" method="post">
     <div class = "contact" >
         <label  class = "contact" for="name">Name : </label>
