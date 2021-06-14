@@ -5,7 +5,6 @@ import { userStore } from "../stores";
 
 </script>
 <div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
-<div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
 
     <section>
 
