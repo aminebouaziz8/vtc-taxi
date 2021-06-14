@@ -1,6 +1,4 @@
 <div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
-
-
     <section>
 
         <div class="row justify-content-center">
