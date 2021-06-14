@@ -1,7 +1,6 @@
 <script>
   import {Router, Link, Routes} from "svelte-routing";
   import Tailwindcss from './Tailwindcss.svelte';
-  import Router from 'svelte-spa-router'
   import SignUp from './routes/SignUp.svelte'
   import SignIn from './routes/SignIn.svelte'
   import Profile from './routes/Profile.svelte'
