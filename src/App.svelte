@@ -26,12 +26,7 @@ Loading..
 {#if error}
 <strong class="text-red-700 font-bold">ERROR! {error.message} </strong>
 {/if}
-<Router routes={{
-'/': SignUp,
-'/signin': SignIn,
-'/forgotpassword': ForgotPassword,
-'/profile' : Profile
-}} />
+
 {#if $userStore}
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -54,6 +49,9 @@ Loading..
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <a class="nav-link" href="/profile">Hello, {$userStore.username}! </a>
+      <Router routes={{
+      '/profile' : Profile
+      }} />
       <button on:click={signout} class="btn btn-outline-danger my-2 my-sm-0" type="submit">Log out</button>
     </form>
   </div>
@@ -122,6 +120,11 @@ Loading..
 {:else}
 <div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
   <h1>Welcome to THE BEST WAY TO book a Taxi !</h1>
+  <Router routes={{
+  '/': SignUp,
+  '/signin': SignIn,
+  '/forgotpassword': ForgotPassword
+  }} />
 </div>
 {/if}
 {/await}
