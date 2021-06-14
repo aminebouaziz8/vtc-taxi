@@ -11,13 +11,13 @@ import { userStore } from "../stores";
 
         <div class="row justify-content-center">
             <div class="col-4">
-                <h1 class="center subtitle" style="text-align: center;">Always on time !</h1>
+                <h1 class="center subtitle" style="text-align: center;">Contact us.</h1>
             </div>
         </div>
 
         <div class="col-16">
             <h4 style="text-align: center">
-               A question? A feedback? Contact us.
+               A question? A feedback? Let us hear from you.
             </h4>
         </div>
         <div class="row justify-content-center">
