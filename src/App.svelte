@@ -6,6 +6,13 @@
   import Profile from './routes/Profile.svelte'
   import ForgotPassword from './routes/ForgotPassword.svelte'
   import {userbaseStore, userStore, promiseStore} from './stores'
+
+  const routes = {
+    // Exact path
+    '/': Home,
+
+    '/profile': Profile,
+  }
   const userbase = window.userbase
   window.userbase = null
   // stores
