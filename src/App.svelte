@@ -17,7 +17,7 @@
     $promiseStore = $userbaseStore.signOut().then(() => $userStore = null)
   }
 </script>
-
+<body>
 <Tailwindcss />
 {#await $promiseStore.then(() => Promise.reject())}
 Loading..
@@ -102,6 +102,15 @@ Loading..
     </form>
   </section>
 </div>
+</body>
+<footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-dark" >VTC Taxi</a>
+  </div>
+  <!-- Copyright -->
+</footer>
 {:else}
 <div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
 
@@ -109,7 +118,8 @@ Loading..
   <Router routes={{
   '/': SignUp,
   '/signin': SignIn,
-  '/forgotpassword': ForgotPassword
+  '/forgotpassword': ForgotPassword,
+  '/profile': Profile
   }} />
 </div>
 {/if}
