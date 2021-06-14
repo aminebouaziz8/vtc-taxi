@@ -118,11 +118,14 @@ Loading..
   </section>
 </div>
 {:else}
+<div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
+
   <h1>Welcome to THE BEST WAY TO book a Taxi !</h1>
   <Router routes={{
   '/': SignUp,
   '/signin': SignIn,
   '/forgotpassword': ForgotPassword
   }} />
+</div>
 {/if}
 {/await}
