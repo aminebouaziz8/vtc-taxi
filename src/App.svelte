@@ -1,14 +1,14 @@
 <script>
   import {Router, Link, Routes} from "svelte-routing";
-  import Tailwindcss from './Tailwindcss.svelte';
-  import SignUp from './routes/SignUp.svelte'
-  import SignIn from './routes/SignIn.svelte'
-  import Profile from './routes/Profile.svelte'
-  import ForgotPassword from './routes/ForgotPassword.svelte'
-  import {userbaseStore, userStore, promiseStore} from './stores'
+  <!--import Tailwindcss from './Tailwindcss.svelte';-->
+  import SignUp from './routes/SignUp.svelte';
+  import SignIn from './routes/SignIn.svelte';
+  import Profile from './routes/Profile.svelte';
+  import ForgotPassword from './routes/ForgotPassword.svelte';
+  <!--import {userbaseStore, userStore, promiseStore} from './stores'-->
 
   export let url = "";
-  const userbase = window.userbase;
+  /*const userbase = window.userbase;
   window.userbase = null;
   // stores
   $userbaseStore = userbase;
@@ -18,7 +18,7 @@
 
   function signout() {
     $promiseStore = $userbaseStore.signOut().then(() => $userStore = null)
-  }
+  }*/
 </script>
 
 <!-- <Tailwindcss />
