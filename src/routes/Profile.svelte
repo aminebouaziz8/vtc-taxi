@@ -25,7 +25,7 @@
                     <div class="profile-name">{$userStore.username}
                         <p>@{$userStore.username}</p>
                     </div>
-                    <div class="profile-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.</div>
+                    <div class="profile-description">I love Taxis !</div>
                     <div class="row">
                         <div class="col-xs-4">
                             <div class="profile-overview">
@@ -34,7 +34,7 @@
                             <div class="col-xs-4">
                                 <div class="profile-overview">
                                     <p>RIDES</p>
-                                    <h4>XXX</h4>
+                                    <h4>145</h4>
                                 </div>
                             </div>
                             <div class="col-xs-4">
