@@ -25,8 +25,8 @@ Loading..
 {#if error}
 <strong class="text-red-700 font-bold">ERROR! {error} </strong>
 {/if}
-{/await}
 
+{#if $userStore}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,12 +57,8 @@ Loading..
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      {#await $promiseStore.then(() => Promise.reject())}
-      {#if $userStore}
       Hello, {$userStore.username}!
       <button on:click={signout} class="btn btn-outline-success my-2 my-sm-0" type="submit">Log out</button>
-      {/if}
-      {/await}
     </form>
   </div>
 </nav>
@@ -120,46 +116,13 @@ Loading..
       </div>
     </form>
   </section>
-
-  <style>
-    section {
-      display: flex;
-      flex-direction: column;
-      justify-contentp: center;
-      align-items: center;
-      flex: 1;
-    }
-    h1 {
-      width: 100%;
-    }
-
-    label, input {
-      display: table-cell;
-      margin-bottom: 15px;
-    }
-    label {
-      padding-right:100px;
-    }
-    form.homebook {
-      display:table;
-    }
-    div.homebook {
-      display: table-row;
-    }
-    div.submit {
-      text-align: right;
-      margin-top:30px;
-      font-size: 20px;
-    }
-  </style>
-  {#await $promiseStore.then(() => Promise.reject())}
-  {#if !$userStore}
+</div>
+{:else}
   <h1>Welcome to THE BEST WAY TO book a Taxi !</h1>
   <Router routes={{
   '/': SignUp,
   '/signin': SignIn,
   '/forgotpassword': ForgotPassword
   }} />
-  {/if}
-  {/await}
-</div>
+{/if}
+{/await}
