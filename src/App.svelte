@@ -5,7 +5,7 @@
   import SignIn from './routes/SignIn.svelte';
   import Profile from './routes/Profile.svelte';
   import ForgotPassword from './routes/ForgotPassword.svelte';
-  <!--import {userbaseStore, userStore, promiseStore} from './stores'-->
+  //import {userbaseStore, userStore, promiseStore} from './stores'
 
   export let url = "";
   /*const userbase = window.userbase;
