@@ -62,13 +62,13 @@ Loading..
       </div>
     </div>
     <div class="row justify-content-center">
-      <div class="col-4">
-        <h2 style="text-align: center">
+      <div class="col-16">
+        <h4 style="text-align: center">
           Whether you’re visiting Paris and want to book a taxi from the train station <strong>to
           your hotel</strong>, need to get a cab from the city <strong>back home</strong> or are flying out from Paris
           airports and need an <strong>airport express taxi service</strong> in Paris to get you there as
           quickly as possible, you can rely on us.
-        </h2>
+        </h4>
       </div>
     </div>
     <p style="text-align: center">Order your next ride !</p>
