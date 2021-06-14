@@ -9,7 +9,7 @@
 
   const routes = {
     // Exact path
-    '/': SignUp,
+    '/signup': SignUp,
     '/signin': SignIn,
     '/forgotpassword': ForgotPassword,
     '/profile': Profile
@@ -129,7 +129,7 @@ Loading..
 <div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
   <h1>Welcome to THE BEST WAY TO book a Taxi !</h1>
   <Router routes={{
-  '/': SignUp,
+  '/signup': SignUp,
   '/signin': SignIn,
   '/forgotpassword': ForgotPassword
   }} />
