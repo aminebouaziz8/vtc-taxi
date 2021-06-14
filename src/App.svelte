@@ -25,6 +25,7 @@ Loading..
 {#if error}
 <strong class="text-red-700 font-bold">ERROR! {error} </strong>
 {/if}
+{/await}
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
@@ -56,10 +57,12 @@ Loading..
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
+      {#await $promiseStore.then(() => Promise.reject())}
       {#if $userStore}
       Hello, {$userStore.username}!
       <button on:click={signout} class="btn btn-outline-success my-2 my-sm-0" type="submit">Log out</button>
       {/if}
+      {/await}
     </form>
   </div>
 </nav>
@@ -149,6 +152,7 @@ Loading..
       font-size: 20px;
     }
   </style>
+  {#await $promiseStore.then(() => Promise.reject())}
   {#if !$userStore}
   <h1>Welcome to THE BEST WAY TO book a Taxi !</h1>
   <Router routes={{
