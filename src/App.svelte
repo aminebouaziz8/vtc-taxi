@@ -7,7 +7,6 @@
   import ForgotPassword from './routes/ForgotPassword.svelte';
   import {userbaseStore, userStore, promiseStore} from './stores'
 
-  export let url = "";
   const userbase = window.userbase;
   window.userbase = null;
   //stores
