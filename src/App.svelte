@@ -16,8 +16,7 @@
     '/signup': SignUp,
     '/signin': SignIn,
     '/forgotpassword': ForgotPassword,
-    '/profile': Profile,
-    '/contact': Contact
+    '/profile': Profile
   }
   const userbase = window.userbase
   window.userbase = null
@@ -57,7 +56,7 @@ Loading..
         <a class="nav-link" href="/" use:link>Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/contact" use:link>Contact</a>
+        <a class="nav-link">Contact</a>
       </li>
     </ul>
   
