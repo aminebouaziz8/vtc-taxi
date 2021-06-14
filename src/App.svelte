@@ -30,7 +30,8 @@ Loading..
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <img src="/logo.png" alt="Taxi" width="40"/>
+  <a class="navbar-brand" >GoTaxi</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -68,14 +69,10 @@ Loading..
 
 
   <section>
-    <img src="/logo.png" alt="Taxi" width="200"/>
-    <h1>
-      GoTaxi
-    </h1>
 
-    <h2 class="subtitle">Always on time</h2>
+    <h1 class="center subtitle">Always on time !</h1>
 
-    <h2>
+    <h2 class="center">
       Whether you’re visiting Paris and want to book a taxi from the train station <strong>to
       your hotel</strong>, need to get a cab from the city <strong>back home</strong> or are flying out from Paris
       airports and need an <strong>airport express taxi service</strong> in Paris to get you there as
@@ -84,38 +81,32 @@ Loading..
 
     <p>Order your next ride !</p>
 
-    <form action="" method="get" class="homebook">
-      <div class="homebook">
-        <label for="pickup" >Pickup:</label>
-        <input id="pickup" type="text">
+    <form>
+      <div class="form-group">
+        <label for="pickUp">PickUp</label>
+        <input type="text" class="form-control" id="pickUp" placeholder="ex: Cergy">
       </div>
-
-      <div class="homebook">
-        <label for="destination">Destination:</label>
-        <input id="destination" type="text">
+      <div class="form-group">
+        <label for="destination">Destination</label>
+        <input type="text" class="form-control" id="destination" placeholder="Ex: La Defense">
       </div>
-
-      <div class="homebook">
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="ridedate" value="2021-31-05" min="today" max="2021-12-31">
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" class="form-control" value="2021-31-05" min="today" max="2021-12-31">
       </div>
-
-      <div class="homebook">
-        <label for="nbpassengers">Number of passengers:</label>
-        <select id="nbpassengers" name="nbpassengers">
-          <option value= "">Choose an option</option>
-          <option value="1">1 passenger</option>
-          <option value="2">2 passengers</option>
-          <option value="3">3 passengers</option>
-          <option value="4">4 passengers</option>
-          <option value="5">5 passengers</option>
-          <option value="6">6 passengers</option>
-        </select>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <label class="form-check-label" for="inlineRadio1">1 passenger</label>
       </div>
-
-      <div class = "submit">
-        <a href="#"><input type="submit" value="Book"></a>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">2 passengers</label>
       </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+        <label class="form-check-label" for="inlineRadio3">3 passengers</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </section>
 </div>
