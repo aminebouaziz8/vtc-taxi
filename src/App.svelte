@@ -98,7 +98,9 @@ Loading..
           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
           <label class="form-check-label" for="inlineRadio3">3 passengers</label>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="form-check form-check-inline">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
       </form>
     </div>
 
