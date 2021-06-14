@@ -3,6 +3,7 @@
   import Router from 'svelte-spa-router'
   import SignUp from './routes/SignUp.svelte'
   import SignIn from './routes/SignIn.svelte'
+  import Profile from './routes/Profile.svelte'
   import ForgotPassword from './routes/ForgotPassword.svelte'
   import {userbaseStore, userStore, promiseStore} from './stores'
   const userbase = window.userbase
@@ -112,13 +113,11 @@ Loading..
 </footer>
 {:else}
 <div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
-
   <h1>Welcome to THE BEST WAY TO book a Taxi !</h1>
   <Router routes={{
   '/': SignUp,
   '/signin': SignIn,
-  '/forgotpassword': ForgotPassword,
-  '/profile': Profile
+  '/forgotpassword': ForgotPassword
   }} />
 </div>
 {/if}
