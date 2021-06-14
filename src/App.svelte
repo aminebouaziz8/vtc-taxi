@@ -19,6 +19,13 @@
 </script>
 
 <Tailwindcss />
+{#await $promiseStore.then(() => Promise.reject())}
+Loading..
+{:catch error}
+{#if error}
+<strong class="text-red-700 font-bold">ERROR! {error} </strong>
+{/if}
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,21 +56,15 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      {#if $userStore}
+      Hello, {$userStore.username}!
+      <button on:click={signout} class="btn btn-outline-success my-2 my-sm-0" type="submit">Log out</button>
     </form>
   </div>
 </nav>
 <div class="container flex flex-col justify-center items-center w-screen h-screen mx-auto">
-  {#await $promiseStore.then(() => Promise.reject())}
-  Loading..
-  {:catch error}
-  {#if error}
-  <strong class="text-red-700 font-bold">ERROR! {error} </strong>
-  {/if}
-  {#if $userStore}
-  Hello, {$userStore.username}!
-  <button on:click={signout}>Logout</button>
+
+
   <section>
     <img src="/logo.png" alt="Taxi" width="200"/>
     <h1>
